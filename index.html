@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/13c3317458.js" crossorigin="anonymous"></script>
     <script src="index.js" defer></script>
+    
 </head>
 <body class="flex">
     <h1>Tic Tac Toe</h1>
@@ -14,16 +15,69 @@
     <button onclick="start(2)">2 Player</button>
     <div class="flex">
         <button onclick="volume_btn()"><i class="fa-solid fa-volume vol"></i><i class="fa-solid fa-volume-xmark mute"></i></button>
-        <button onclick="credits()"><i class="fa-solid fa-newspaper"></i></button>
+        <button onclick="credits('popup')"><i class="fa-solid fa-newspaper"></i></button>
         <button><i class="fa-solid fa-comment-dots"></i></button>
     </div>
+    <decoration>
+        <i class="fa-solid fa-xmark icon x" id="i1"></i>
+        <i class="fa-regular fa-circle icon o" id="i2"></i>
+        <i class="fa-solid fa-xmark icon x" id="i3"></i>
+        <i class="fa-regular fa-circle icon o" id="i4"></i>
+    </decoration>
     <dialog id="popup">
-        
-    <div class="flex"><h2>Credits</h2><button class="cross" onclick="drop()">x</button></div>
+            
+        <div class="flex"><h2>Credits</h2><button class="cross" onclick="drop('popup')">x</button></div>
 
-    <p><strong>Developer:</strong> Atharva</p>
-    <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-    <p><strong>AI Assistance:</strong> ChatGPT (GPT-5.6 Luna)</p>
+<section class="credits"><br>
+
+    <div class="developer">
+        <h3>Developed & Designed by</h3>
+        <p><strong>Atharva Khangar</strong></p>
+
+        <p>
+            <a href="https://github.com/atharvakhangar" target="_blank">
+                GitHub
+            </a>
+            |<br>
+            <a href="https://www.linkedin.com/in/atharva-khangar" target="_blank">
+                LinkedIn
+            </a>
+        </p>
+    </div><br><br>
+    <div class="credits-list">
+        <h3>AI Assistance</h3>
+        <p>ChatGPT</p><br><br>
+
+        <h3>Font</h3>
+        <p>
+            Khurasan Type<br>
+            <a href="mailto:khurasantype@gmail.com">khurasantype@gmail.com</a><br>
+            <a href="https://www.creativefabrica.com/ref/53/" target="_blank">
+                Creative Fabrica
+            </a>
+        </p><br><br>
+
+        <h3>Audio</h3>
+        <p>The_Mountain</p><br><br>
+
+        <h3>Symbols &amp; Icons</h3>
+        <p><a herf="https://fontawesome.com/">Font Awesome</a></p><br><br>
+    </div>
+
+    <div class="technologies">
+        <h3>Technologies Used</h3>
+        <p>HTML &bull; CSS &bull; Java<br>Script</p>
+    </div>
+</section>
+    </dialog>
+    <audio loop id="music">
+        <source src="the_mountain-classical-piano-375979.mp3" type="audio/mp3">
+    </audio>
+    <dialog id="play">
+        <div class="flex">        
+            <h1>Tic Tac Toe</h1>
+            <button onclick="drop('play'); volume_btn();"><h2>Enter</h2></button>
+        </div>
     </dialog>
 </body>
 </html>

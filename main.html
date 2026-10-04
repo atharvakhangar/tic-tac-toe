@@ -8,26 +8,51 @@
     <script src="https://kit.fontawesome.com/13c3317458.js" crossorigin="anonymous"></script>
     <script src="main.js" defer></script>
 </head>
+<nav class="flex">
+<button id="pause" onclick="pause_btn()"><i class="fa-solid fa-pause"></i></button>
+</nav>
 <body class="flex">
     <h1>Tic Tac Toe</h1>
     <section>
         <table>
+            <hr id="win_line">
             <tr>
-                <td data-row="0" data-colum="0"><div><i class="fa-solid fa-xmark icon x"></i><i class="fa-regular fa-circle icon o"></i></div></td>
-                <td data-row="0" data-colum="1"><div><i class="fa-solid fa-xmark icon x"></i><i class="fa-regular fa-circle icon o"></i></div></td>
-                <td data-row="0" data-colum="2"><div><i class="fa-solid fa-xmark icon x"></i><i class="fa-regular fa-circle icon o"></i></div></td>
+                <td id="i1" data-row="0" data-colum="0"><div><i class="fa-solid fa-xmark icon x"></i><i class="fa-regular fa-circle icon o"></i></div></td>
+                <td id="i2" data-row="0" data-colum="1"><div><i class="fa-solid fa-xmark icon x"></i><i class="fa-regular fa-circle icon o"></i></div></td>
+                <td id="i3" data-row="0" data-colum="2"><div><i class="fa-solid fa-xmark icon x"></i><i class="fa-regular fa-circle icon o"></i></div></td>
             </tr>
             <tr>
-                <td data-row="1" data-colum="0"><div><i class="fa-solid fa-xmark icon x"></i><i class="fa-regular fa-circle icon o"></i></div></td>
-                <td data-row="1" data-colum="1"><div><i class="fa-solid fa-xmark icon x"></i><i class="fa-regular fa-circle icon o"></i></div></td>
-                <td data-row="1" data-colum="2"><div><i class="fa-solid fa-xmark icon x"></i><i class="fa-regular fa-circle icon o"></i></div></td>
+                <td id="i4" data-row="1" data-colum="0"><div><i class="fa-solid fa-xmark icon x"></i><i class="fa-regular fa-circle icon o"></i></div></td>
+                <td id="i5" data-row="1" data-colum="1"><div><i class="fa-solid fa-xmark icon x"></i><i class="fa-regular fa-circle icon o"></i></div></td>
+                <td id="i6" data-row="1" data-colum="2"><div><i class="fa-solid fa-xmark icon x"></i><i class="fa-regular fa-circle icon o"></i></div></td>
             </tr>
             <tr>
-                <td data-row="2" data-colum="0"><div><i class="fa-solid fa-xmark icon x"></i><i class="fa-regular fa-circle icon o"></i></div></td>
-                <td data-row="2" data-colum="1"><div><i class="fa-solid fa-xmark icon x"></i><i class="fa-regular fa-circle icon o"></i></div></td>
-                <td data-row="2" data-colum="2"><div><i class="fa-solid fa-xmark icon x"></i><i class="fa-regular fa-circle icon o"></i></div></td>
+                <td id="i7" data-row="2" data-colum="0"><div><i class="fa-solid fa-xmark icon x"></i><i class="fa-regular fa-circle icon o"></i></div></td>
+                <td id="i8" data-row="2" data-colum="1"><div><i class="fa-solid fa-xmark icon x"></i><i class="fa-regular fa-circle icon o"></i></div></td>
+                <td id="i9" data-row="2" data-colum="2"><div><i class="fa-solid fa-xmark icon x"></i><i class="fa-regular fa-circle icon o"></i></div></td>
             </tr>
         </table>
     </section>
+    <dialog>
+        <section class="flex" id="sec">
+            <h1><section id="jsdiv">Someone win</section></h1>
+            <i><h4 id="comment">"Our AI is well trained"</h4></i>
+            <section id="score">
+                <h3 style="color:blue">Blue : <span id="score_o">0</span></h3>
+                <h3 style="color:red">Red : <span id="score_x">0</span></h3>
+                <h3>Draw : <span id="score_d">0</span></h3>
+            </section>
+            <section id="button_bar" class="flex">
+                <button onclick="resume_btn()" id="resume"><i class="fa-solid fa-circle-play"></i>Resume</button>
+                <button onclick="rematch_btn()"><i class="fa-solid fa-rotate-right"></i>Rematch</button>
+                <button onclick="location.assign('index.html')"><i class="fa-solid fa-house"></i>Home</button>
+                <button onclick="restart_btn()"><i class="fa-solid fa-play"></i>Restart</button>
+            </section>
+        </section>
+    </dialog>
+    <audio loop id="music">
+        <source src="the_mountain-classical-classical-song-576563.mp3" type="audio/mp3">
+    </audio>
+    <!-- <button onclick="location.reload()">hello</button> -->
 </body>
 </html>
